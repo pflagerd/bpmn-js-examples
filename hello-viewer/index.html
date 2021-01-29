@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title>hello-viewer</title>
+
+  <script src="https://unpkg.com/bpmn-js@8.2.0/dist/bpmn-viewer.development.js"></script>
+
+  <script src="https://unpkg.com/jquery@3.3.1/dist/jquery.js"></script>
+</head>
+<body>
+  <div id="canvas">
+  </div>
+
+  <script>
+    let viewer = new BpmnJS({
+      container: $('#canvas'),
+      height: 600
+    });
+
+    function openFromUrl(url) {
+
+      console.log('attempting to open <' + url + '>');
+
+      $.ajax(url, { dataType : 'text' }).done(async function(xml) {
+
+        try {
+          await viewer.importXML(xml);
+
+          viewer.get('canvas').zoom('fit-viewport');
+          console.log('success');
+        } catch (err) {
+          console.log('error: ' + err.message);
+          console.error(err);
+        }
+      });
+    }
+
+    openFromUrl('resources/pizza-collaboration.bpmn');
+
+    </script>
+</html>

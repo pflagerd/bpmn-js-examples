@@ -1,0 +1,23 @@
+## Usage
+
+To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/) in the browser:
+
+```javascript
+<html>
+<head>
+  <title>hello-viewer</title>
+  <script src="https://unpkg.com/bpmn-js@8.2.0/dist/bpmn-viewer.development.js"></script>
+</head>
+<body>
+  <script>
+    let c = document.createElement('div');
+    document.body.appendChild(c);
+
+    let viewer = new BpmnJS({ container: c });
+
+    fetch('https://cdn.staticaly.com/gh/bpmn-io/bpmn-js-examples/dfceecba/starter/diagram.bpmn')
+            .then(response => response.text())
+            .then(xml => viewer.importXML(xml));
+    </script>
+</html>
+```

@@ -56,8 +56,6 @@ Execute the test suite to spin up the example in your browser:
 npm run dev
 ```
 
-Go to [localhost:9876/debug.html](http://localhost:9876/debug.html) to inspect the example in your Browser.
-
 
 ## License
 

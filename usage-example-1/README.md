@@ -1,6 +1,6 @@
 ## Usage
 
-To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/) in the browser:
+To get started copy the code below to a local file (e.g. hello-viewer.html):
 
 ```javascript
 <html>
@@ -21,3 +21,8 @@ To get started, render a [BPMN 2.0 diagram](https://www.omg.org/spec/BPMN/2.0.2/
     </script>
 </html>
 ```
+
+Now load the file using a browser (Chrome, Firefox, etc.) and you will see a BPMN diagram:
+
+![1611957113924](../../bpmn-js/.md/README/1611957113924.png)
+

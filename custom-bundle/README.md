@@ -1,6 +1,6 @@
 # custom-bundle example
 
-How to role a customized, pre-packaged version of [bpmn-js](https://github.com/bpmn-io/bpmn-js).
+How to create a customized, pre-packaged version of [bpmn-js](https://github.com/bpmn-io/bpmn-js).
 
 __Note:__ This is an __advanced__ topic.
 

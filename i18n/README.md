@@ -63,7 +63,7 @@ npm install
 To start the example execute
 
 ```sh
-npm start
+npm run dev
 ```
 
 To build the example into the `public` folder execute

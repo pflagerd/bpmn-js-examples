@@ -1,6 +1,6 @@
 # custom-meta-model example
 
-This example showcases how to provide a meta model extensions for BPMN 2.0 to [bpmn-js](https://github.com/bpmn-io/bpmn-js).
+This example showcases how to provide a meta model extension for BPMN 2.0 to [bpmn-js](https://github.com/bpmn-io/bpmn-js).
 
 This allows a BPMN viewer / modeler instance to read, create and write domain specific data from and to BPMN 2.0 files.
 

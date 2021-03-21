@@ -4,9 +4,9 @@ import BpmnModeler from 'bpmn-js/lib/Modeler';
 
 import diagramXML from '../resources/newDiagram.bpmn';
 
-var container = $('#js-drop-zone');
+let container = $('#js-drop-zone');
 
-var modeler = new BpmnModeler({
+let modeler = new BpmnModeler({
   container: '#js-canvas'
 });
 
@@ -41,15 +41,15 @@ function registerFileDrop(container, callback) {
     e.stopPropagation();
     e.preventDefault();
 
-    var files = e.dataTransfer.files;
+    let files = e.dataTransfer.files;
 
-    var file = files[0];
+    let file = files[0];
 
-    var reader = new FileReader();
+    let reader = new FileReader();
 
     reader.onload = function(e) {
 
-      var xml = e.target.result;
+      let xml = e.target.result;
 
       callback(xml);
     };
@@ -91,8 +91,8 @@ $(function() {
     createNewDiagram();
   });
 
-  var downloadLink = $('#js-download-diagram');
-  var downloadSvgLink = $('#js-download-svg');
+  let downloadLink = $('#js-download-diagram');
+  let downloadSvgLink = $('#js-download-svg');
 
   $('.buttons a').click(function(e) {
     if (!$(this).is('.active')) {
@@ -102,7 +102,7 @@ $(function() {
   });
 
   function setEncoded(link, name, data) {
-    var encodedData = encodeURIComponent(data);
+    let encodedData = encodeURIComponent(data);
 
     if (data) {
       link.addClass('active').attr({
@@ -114,7 +114,7 @@ $(function() {
     }
   }
 
-  var exportArtifacts = debounce(async function() {
+  let exportArtifacts = debounce(async function() {
 
     try {
 
@@ -147,7 +147,7 @@ $(function() {
 
 function debounce(fn, timeout) {
 
-  var timer;
+  let timer;
 
   return function() {
     if (timer) {
